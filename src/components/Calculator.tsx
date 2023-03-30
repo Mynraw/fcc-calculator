@@ -7,7 +7,7 @@ const Calculator = () => {
         </div>
         <div className={"grid grid-cols-4 grid-rows-5 gap-0.5"}>
             {calculatorItems.map((item: any) => (
-                <button className={`p-2 border border-transparent ${item.twClass} hover:border-white`} key={item.key}>{item.key}</button>
+                <button className={`p-2 border border-transparent ${item.twClass} hover:border-white hover:text-black`} key={item.key}>{item.key}</button>
             ))}
         </div>
     </div>

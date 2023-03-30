@@ -11,9 +11,9 @@ export const calculatorItems: object[] = [
     {key: 9, twClass: "row-start-2 bg-gray-600"},
     {key: '.', twClass: "row-start-5 bg-gray-600"},
     {key: 'AC', twClass: "row-start-1 col-start-1 col-end-3 bg-red-800"},
-    {key: '/', twClass: "bg-gray-600"},
-    {key: 'X', twClass: "bg-gray-600"},
-    {key: '-', twClass: "row-start-2 col-start-4 bg-gray-600"},
-    {key: '+', twClass: "row-start-3 col-start-4 bg-gray-600"},
+    {key: '/', twClass: "bg-gray-800"},
+    {key: 'X', twClass: "bg-gray-800"},
+    {key: '-', twClass: "row-start-2 col-start-4 bg-gray-800"},
+    {key: '+', twClass: "row-start-3 col-start-4 bg-gray-800"},
     {key: '=', twClass: "row-start-4 row-end-6 col-start-4 bg-blue-400"},
 ]
