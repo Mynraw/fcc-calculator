@@ -38,16 +38,16 @@ const OperatorButton = () => {
     const evaluate = () => {
         switch (currentOperator) {
             case '/':
-               dispatch(getCurrentValue( accumulatedValue / currentValue));
+               dispatch(getCurrentValue( Number(accumulatedValue) / Number(currentValue)));
                 break;
             case 'x':
-                dispatch(getCurrentValue( accumulatedValue * currentValue));
+                dispatch(getCurrentValue( Number(accumulatedValue) * Number(currentValue)));
                 break;
             case '+':
                 dispatch(getCurrentValue( Number(accumulatedValue) + Number(currentValue)));
                 break;
             case '-':
-                dispatch(getCurrentValue( accumulatedValue - currentValue));
+                dispatch(getCurrentValue( Number(accumulatedValue) - Number(currentValue)));
                 break;
             default:
                if (!currentValue || !accumulatedValue) {
