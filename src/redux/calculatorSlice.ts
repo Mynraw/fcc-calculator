@@ -3,26 +3,29 @@ import { createSlice } from "@reduxjs/toolkit";
 const calculatorSlice = createSlice({
     name: "calculator",
     initialState: {
-        operation: "",
-        firstValue: 0,
-        secondValue: 0,
-        result: 0
+        operator: "",
+        currentValue: "",
+        accumulatedValue: "",
     },
     reducers: {
         getOperation: (state, action) => {
-            state.operation = action.payload;
+            state.accumulatedValue += state.currentValue;
+            state.operator = action.payload;
+            state.currentValue = "";
         },
-        getFirstValue: (state, action) => {
-            state.firstValue = action.payload;
+        getCurrentValue: (state, action) => {
+            state.currentValue += action.payload;
         },
-        getSecondValue: (state, action) => {
-            state.secondValue = action.payload;
+        nullDigit: (state, action) => {
+            state.accumulatedValue = action.payload;
         },
-        calculate: (state) => {
-            state.result = state.firstValue + Number(state.operation) + state.secondValue;
-        },
+        resetValues: (state) => {
+            state.currentValue = "";
+            state.operator = "";
+            state.accumulatedValue = "";
+        }
     }
 });
 
-export const {getOperation, getFirstValue, getSecondValue, calculate} = calculatorSlice.actions;
+export const {getOperation, getCurrentValue, resetValues, nullDigit} = calculatorSlice.actions;
 export default calculatorSlice.reducer;
